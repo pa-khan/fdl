@@ -1,11 +1,18 @@
-@media screen and (max-width: 1199px) {
-  .container {
-    width: 950px; } }
+@media screen and (max-width: 1615px) {
+  .logo {
+    width: 108px; }
+    .logo__desc {
+      display: none; }
+  .nav {
+    width: -webkit-calc(100% - 108px - 312px);
+    width: calc(100% - 108px - 312px); } }
 
-@media screen and (max-width: 970px) {
-  .container {
-    width: 750px; } }
+@media screen and (max-width: 1420px) {
+  .nav li {
+    margin-left: 10px;
+    margin-right: 10px; } }
 
-@media screen and (max-width: 767px) {
-  .container {
-    width: 100%; } }
+@media screen and (max-width: 1300px) {
+  .panel {
+    padding-left: 15px;
+    padding-right: 15px; } }

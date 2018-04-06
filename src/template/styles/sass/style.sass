@@ -1,13 +1,17 @@
 /* Including styles files */
-@import sprite.sass
 @import fonts.sass
+@import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import '../../libs/slick-carousel/slick/slick.css'
+@import '../../libs/slick-carousel/slick/slick-theme.css'
+@import '../../libs/jquery.form-styler/dist/jquery.formstyler.css'
+@import '../../libs/jquery.form-styler/dist/jquery.formstyler.theme.css'
 
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
-$color-1: #000
+$font-size: 12px
+$font-family-1: 'HelveticaNeueCyr', sans-serif
+$color-1: #666666
 
 
 *
@@ -103,10 +107,17 @@ img
 		display: block
 		font-size: $font-size
 		font-family: $font-family-1
-		background: white
+		background: transparent
 		width: 100%
+		color: #666666
+		padding-bottom: 16px
+		padding-top: 4px
+		border-bottom: 1px solid #dedede
+		font-weight: 500
+		&:focus
+			border-color: #31b2eb
 		&::placeholder
-			color: #878686
+			color: #666666
 
 .textarea
 	textarea
@@ -124,13 +135,32 @@ img
 .btn
 	position: relative
 	display: block
-	font-size: $font-size
+	font-size: 13px
 	font-family: $font-family-1
 	cursor: pointer
 	margin-left: auto
 	margin-right: auto
 	text-align: center
 	transition: .3s
+	border-radius: 50px
+	&_small
+		font-size: 12px
+		line-height: 28px
+		border: 1px solid #31b2eb
+	&_normal
+		line-height: 44px
+		border: 2px solid #31b2eb
+	&_white
+		background-color: white
+		&:hover
+			color: #fff
+			background-color: #31b2eb
+	&_blue
+		color: #fff
+		background-color: #31b2eb
+		&:hover
+			color: $color-1
+			background-color: transparent
 
 .input input, .textarea textarea
 	transition: .3s
@@ -148,3 +178,1092 @@ img
 .mid, .case
 	margin-left: auto
 	margin-right: auto
+
+.icon-
+	&clock
+		width: 16px
+		path, g
+			fill: #31b2eb
+	&buildings, &podemnik, &transport, &policy, &boxes, &list
+		width: 64px
+		path, g
+			fill: #31b2eb
+
+	&task-list, &people-heart, &kran, &flots, &people, &shesterenka, &truck
+		width: 48px
+		path, g
+			fill: #cccccc
+
+	&burner, &gasoline, &telezhka, &svecha, &kolba-2, &bottle, &kolba-rastenie, &bottle-yad, &animal, &kolba-1, &book
+		path, g
+			fill: #31b2eb
+
+	&burner
+		width: 26px
+
+	&gasoline
+		width: 24px
+
+	&telezhka
+		width: 32px
+
+	&svecha, &kolba-2
+		width: 22px
+
+	&bottle
+		width: 20px
+
+	&kolba-rastenie
+		width: 18px
+
+	&bottle-yad
+		width: 28px
+
+	&animal
+		width: 32px
+
+	&kolba-1
+		width: 18px
+
+	&book
+		width: 24px
+
+	&twitter
+		width: 18px
+
+	&facebook
+		width: 20px
+
+	&vk
+		width: 24px
+
+	&skype
+		width: 24px
+
+	&linkedin
+		width: 18px
+
+	&ok
+		width: 14px
+
+	&instagram
+		width: 18px
+
+	&clip
+		width: 16px
+		path, g
+			fill: #31b2eb
+
+.panel
+	z-index: 10
+	padding: 17px 38px
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background-color: #fff
+	transition: .3s
+	&_scroll
+		padding-top: 10px
+		padding-bottom: 10px
+		border-bottom: 2px solid #31b2eb
+	&__call
+		width: 160px
+
+		
+	&__phone
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 5px
+		a
+			color: #333333
+
+.logo
+	font-size: 0
+	width: 293px
+	&__img, &__desc
+		display: inline-block
+		vertical-align: middle
+	&__desc
+		height: 56px
+		padding-top: 10px
+		font-size: 12px
+		font-weight: 500
+		line-height: 18px
+		max-width: 155px
+		border-left: 1px solid #eef2f5
+		padding-left: 30px
+		margin-left: 30px
+
+		
+.nav
+	padding-top: 18px
+	font-weight: 700
+	text-align: center
+	width: calc(100% - 293px - 312px)
+
+	li
+		margin-left: 18px
+		margin-right: 18px
+	a
+		&:hover
+			color: #31b2eb
+		
+
+.time
+	font-size: 0
+	margin-right: 20px
+	padding-top: 10px
+	&__icon, &__text
+		display: inline-block
+		vertical-align: middle
+		
+	&__text
+		font-size: 12px
+		font-weight: 500
+		line-height: 20px
+		text-align: left
+		margin-left: 10px
+		
+.header
+	margin-top: 90px
+	padding-top: 110px
+	padding-bottom: 110px 
+	background-image: url('../../img/header.png')
+
+	&__wrap
+		font-size: 0
+		
+	&__content, &__form
+		vertical-align: middle
+	&__content
+		width: 650px
+		color: #fff
+		text-align: left
+
+	&__form
+		width: calc(100% - 650px)
+		background-color: #fff
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+		border-radius: 10px
+		background-image: url('../../img/form-right.png')
+		background-position: right bottom
+		background-repeat: no-repeat
+		min-height: 360px
+		padding: 27px 30px 0
+		&-title
+			font-size: 16px
+			font-weight: 700
+			margin-bottom: 12px
+		&-desc
+			color: #888888
+			font-weight: 500
+			margin-bottom: 32px
+		&-input
+			margin-bottom: 26px
+		&-subdesc
+			text-align: center
+			margin-bottom: 26px
+
+		&-btn
+			width: 100%
+			max-width: 265px
+			margin-bottom: 26px
+
+		&-policy
+			max-width: 230px
+			margin-left: auto
+			margin-right: auto
+
+		
+
+	&__desc
+		font-size: 24px
+		margin-bottom: 10px
+
+	&__title
+		font-size: 48px
+		font-weight: 700
+		margin-bottom: 15px
+		margin-left: -2px
+
+	&__subdesc
+		font-size: 16px
+		font-weight: 500
+
+
+		
+
+.policy
+	font-size: 11px
+	line-height: 16px
+	font-weight: 500
+	color: #888888
+	a
+		color: #005f95
+		border-color: #005f95
+		&:hover
+			border-color: transparent
+		
+		
+		
+
+
+.bg-cover
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+
+.bg-gray
+	background-color: #eef2f5
+
+.title
+	font-size: 36px
+	font-weight: 700
+	text-align: center
+	color: #222222
+	margin-bottom: 10px
+	padding-top: 48px
+
+.desc
+	font-size: 16px
+	text-align: center
+	margin-bottom: 52px
+
+
+.services
+	padding-bottom: 32px
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+		
+	&__item
+		border-radius: 7px
+		background-color: #ffffff
+		width: calc(33.333% - 30px)
+		margin-left: 15px
+		margin-right: 15px
+		margin-bottom: 30px
+		padding: 30px 0
+		
+	&__icon
+		font-size: 0
+		line-height: 64px
+		margin-bottom: 25px
+
+	&__subtitle
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 25px
+		
+	&__data
+		margin-bottom: 30px
+		border-top: 1px solid #eef2f5
+		li
+			display: block
+			border-bottom: 1px solid #eef2f5
+		a
+			display: block
+			padding-top: 12.5px
+			padding-bottom: 12.5px
+			&:hover
+				background-color: #f5f7f9
+
+		
+	&__btn
+		margin-left: 48px
+		margin-right: 48px
+		
+
+.advantages
+	&__item
+		min-height: 450px
+		overflow: hidden
+		&:nth-of-type(odd)
+			.advantages
+				&__img
+					&:before
+						position: absolute
+						content: ''
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 12.5px 10px 12.5px 0
+						border-color: transparent #ffffff transparent transparent
+						top: 50%
+						right: 0
+						transform: translateY(-50%)
+					img
+						right: 0
+
+				&__content
+					padding-left: 30px
+					
+		&:nth-of-type(even)
+			.advantages
+				&__img
+					float: right
+					&:before
+						position: absolute
+						content: ''
+						width: 0
+						height: 0
+						border-style: solid
+						border-width: 12.5px 0 12.5px 10px
+						border-color: transparent transparent transparent #ffffff
+						top: 50%
+						left: 0
+						transform: translateY(-50%)
+					img
+						left: 0
+					
+				&__wrap
+					margin-left: auto
+
+				&__content
+					padding-right: 30px
+		&:first-of-type
+			.advantages
+				&__content
+					padding-top: 0
+					
+					
+	&__img, &__content
+		width: 50%
+		
+	&__img
+		height: 450px
+		position: relative
+		&:before
+			z-index: 10
+		img
+			top: 0
+			position: absolute
+
+		
+	&__wrap
+		max-width: 570px
+		width: 100%
+		padding-top: 25px
+
+	&__subtitle
+		font-size: 18px
+		font-weight: 700
+		color: #222222
+		margin-bottom: 16px
+
+	&__subdesc
+		font-size: 14px
+		line-height: 22px
+		border-bottom: 1px solid #eef2f5
+		padding-bottom: 25px
+
+	&__data
+		color: #666666
+		font-size: 0
+		padding-top: 17px
+		padding-bottom: 17px
+		border-bottom: 1px solid #eef2f5
+		
+		ul
+			display: inline-block
+			vertical-align: top
+			width: 50%
+		li
+			display: block
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
+
+	&__sublist
+		margin-bottom: 25px
+		margin-top: 25px
+		li
+			display: block
+			padding-left: 17px
+			margin-bottom: 15px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				border: 2px solid #31b2eb
+				background-color: #ffffff
+				border-radius: 50%
+				left: 0
+				top: 4px
+	
+	&__square
+		margin-top: 15px
+		margin-bottom: -5px
+		
+
+.about
+	&__item
+		width: 25%
+		margin-bottom: 60px
+		
+	&__icon
+		margin-bottom: 25px
+		
+	&__count
+		font-size: 40px
+		color: #31b2eb
+		margin-bottom: 10px
+	&__text
+		font-size: 13px
+		line-height: 18px	
+		
+		
+		
+
+		
+.form
+	padding-top: 60px
+	padding-bottom: 60px
+	text-align: center
+	&_bg-factory
+		background-image: url('../../img/form.png')
+	&_bg-blur
+		background-image: url('../../img/form-blure.png')
+	&__wrap
+		width: 945px
+		margin-left: auto
+		margin-right: auto
+		background-color: #fff
+		border-radius: 8px
+		padding: 25px 30px 27px
+		background-repeat: no-repeat
+		background-position: left bottom, right bottom
+		background-image: url('../../img/form-left.png'), url('../../img/form-right.png')
+	&__title
+		font-size: 16px
+		font-weight: 700
+		margin-bottom: 12px
+	&__desc
+		font-weight: 500
+		color: #888888
+		margin-bottom: 31px
+	&__elements
+		margin-bottom: 25px
+	&__element
+		width: 50%
+		&:nth-of-type(1)
+			padding-right: 15px
+		&:nth-of-type(2)
+			padding-left: 15px
+		&_full
+			padding-left: 0 !important
+			width: 100%
+			margin-top: 30px
+	&__input-desc
+		text-align: left
+		margin-top: 26px
+		font-weight: 500
+
+	&__btn
+		max-width: 265px
+		width: 100%
+		margin-bottom: 26px
+		
+		
+.team
+	padding-bottom: 60px
+	&__item
+		width: 33.333%
+		text-align: center
+		padding-left: 5px
+		padding-right: 5px
+	&__img
+		margin-bottom: 25px
+		img
+			margin-left: auto
+			margin-right: auto
+			max-height: 340px
+			border-radius: 7px
+
+	&__name
+		font-size: 18px
+		font-weight: 700
+		color: #333333
+
+	&__position
+		color: #333333
+		font-weight: 500
+		margin-top: 2px
+		margin-bottom: 27px
+		
+		
+		
+.socials
+	text-align: center
+	line-height: 38px
+	&__list
+		li
+			vertical-align: top
+		
+	&__item
+		display: block
+		width: 40px
+		height: 40px
+		border-radius: 8px
+		border: 1px solid #eef2f5
+		// background-color: #ffffff
+		margin-left: 5px
+		margin-right: 5px
+		&_vk
+			&:hover
+				background-color: #4A76A8
+		&_facebook
+			&:hover
+				background-color: #4267B2
+
+		&_skype
+			&:hover
+				background-color: #00aaf2
+
+		&_twitter
+			&:hover
+				background-color: #1DA1F2
+		&_linkedin
+			&:hover
+				background-color: #006193
+		&_youtube
+			background-image: url('../../img/youtube.png')
+			background-position: center
+			background-repeat: no-repeat
+			&:hover
+				background-color: #F00
+				background-image: url('../../img/youtube-hover.png')
+		&_instagram
+			&:hover
+				background-color: #2C2C2C
+		&_ok
+			&:hover
+				background-color: #EE8208
+		&:hover
+			border-color: transparent
+			svg
+				path, g
+					fill: #fff !important
+
+	svg
+		path, g
+			transition: .3s
+			fill: #cccccc !important
+		
+
+.partners
+	padding-bottom: 30px
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+
+	&__item
+		margin-left: 15px
+		margin-right: 15px
+		margin-bottom: 30px
+		width: calc(33.333% - 30px)
+		background-color: #ffffff
+		border-radius: 8px
+		min-height: 360px
+		position: relative
+		&:hover
+			.partners
+				&__hidden
+					opacity: 1
+					
+	&__hidden
+		opacity: 0
+		z-index: 2
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #fff
+		transition: .3s
+		border-radius: 8px
+		padding: 26px 20px
+		
+	&__show
+		z-index: 1
+		position: relative
+		height: 360px
+		background-color: #fff
+		border-radius: 8px
+
+		
+	&__logo
+		font-size: 0
+		height: 360px
+		line-height: 360px
+		text-align: center
+		img
+			display: inline-block
+			vertical-align: middle
+		
+		
+	&__subtitle
+		font-size: 16px
+		font-weight: 700
+		color: #222222
+		margin-bottom: 5px
+
+	&__subdesc
+		padding-bottom: 15px
+		margin-bottom: 17px
+		border-bottom: 1px solid #eef2f5
+		
+	&__text
+		line-height: 20px
+		height: 173px
+		overflow-y: auto
+		padding-right: 5px
+		
+	
+	&__btn
+		max-width: 260px
+		width: 100%
+		margin-left: 0
+		
+
+.gallery
+	padding-bottom: 5px
+	&__subtitle
+		margin-bottom: 24px
+		font-size: 18px
+		font-weight: 700
+		color: #222222
+		text-align: center
+	&__list
+		padding-left: 25px
+		padding-right: 25px
+		
+	&__item
+		margin-bottom: 55px
+		img
+			margin-left: auto
+			margin-right: auto
+			border-radius: 5px
+			max-width: 206px
+			max-height: 160px
+		a
+			display: block
+			position: relative
+			margin-left: 5px
+			margin-right: 5px
+			&:before
+				opacity: 0
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border-radius: 9px
+				transition: .3s
+				background-color: rgba(49, 178, 235, 0.4)
+			&:hover
+				&:before
+					opacity: 1
+		
+	.slick-arrow
+		width: 24px
+		height: auto
+		&:before
+			display: none
+		&:hover
+			path, g
+				fill: #31b2eb !important
+		path, g
+			fill: #cccccc !important
+			transition: .3s
+
+	.slick-prev
+		left: -30px
+
+	.slick-next
+		right: -30px
+		
+
+.certificates
+	&__item
+		a
+			display: block
+			border: 1px solid #eef2f5
+			border-radius: 8px
+			padding: 12px
+		img
+			max-width: 180px
+			max-height: 250px
+		
+
+.be-kept
+	padding-bottom: 50px
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+	&__col
+		width: calc(50% - 30px)
+		margin-left: 15px
+		margin-right: 15px
+		
+	&__item
+		background-color: #ffffff
+		margin-bottom: 10px
+		border-radius: 7px
+		height: 60px
+		padding-top: 10px
+		padding-bottom: 10px
+		
+	&__icon
+		width: 60px
+		line-height: 40px
+		font-size: 0
+		border-right: 1px solid #eef2f5
+
+	&__text
+		width: calc(100% - 60px)
+		padding-left: 20px
+		padding-right: 20px
+		text-align: left
+		font-size: 13px
+		font-weight: 500
+		line-height: 20px
+	&__icon, &__text
+		vertical-align: middle
+		
+		
+.contacts
+	&__map
+		height: 460px
+		
+
+.order
+	padding-bottom: 57px
+	&__subtitle
+		height: 12px
+		font-weight: 500
+		margin-bottom: 17px
+		
+	&__subdesc
+		color: #888888
+		font-size: 12px
+		font-weight: 500
+		margin-bottom: 34px
+		text-align: center
+		
+	&__elements
+		max-width: 885px
+		margin-left: auto
+		margin-right: auto
+	&__element
+		width: 50%
+		margin-bottom: 24px
+		&:nth-of-type(odd)
+			padding-right: 15px
+		&:nth-of-type(even)
+			padding-left: 15px
+		&_full
+			width: 100%
+			padding-left: 0 !important
+
+	&__btn
+		margin-top: 26px
+		max-width: 265px
+		width: 100%
+		margin-bottom: 26px
+
+	&__policy
+		text-align: center
+		
+		
+		
+
+
+.file
+	&__label
+		font-size: 12px
+		display: inline-block
+		cursor: pointer
+		span
+			display: inline-block
+			margin-right: 10px
+			width: 40px
+			height: 40px
+			line-height: 38px
+			text-align: center
+			border-radius: 10px
+			border: 1px solid #dedede
+			background-color: #ffffff
+		strong
+			font-weight: inherit
+	&__input
+		display: none
+		
+		
+
+
+.jq-selectbox
+	display: block
+	.placeholder
+		color: #666666
+	&__select
+		height: 40px
+		padding-top: 4px
+		border: 1px solid #dedede !important
+		background: none !important
+		box-shadow: none !important
+		border-radius: 8px
+		&-text
+			font-family: $font-family-1
+			font-size: 13px
+	&__dropdown
+		border-radius: 8px
+		li
+			display: block
+			font-family: $font-family-1
+			font-size: 13px
+		
+	&__trigger
+		border-left: none
+		&-arrow
+			top: 17px
+
+
+.footer
+	color: #fff
+	background-color: #222222
+	padding: 27px 38px
+	a
+		color: #fff 
+	&__data
+		line-height: 24px
+		font-weight: 500
+		padding-top: 18px
+		width: 240px
+		padding-right: 10px
+	&__nav
+		font-size: 0
+		ul
+			display: inline-block
+			vertical-align: top
+			width: 120px
+		li
+			display: block
+			margin-bottom: 7px
+			&:last-of-type
+				margin-bottom: 0
+		a
+			display: block
+			&:hover
+				color: #31b2eb
+		
+	&__socials
+		padding-top: 12px
+		width: calc(100% - 160px - 240px - 360px)
+		.socials
+			&__title
+				text-align: left
+				margin-left: 5px
+				font-size: 14px
+			&__list
+				text-align: left
+				
+			&__item
+				border-color: #3a3a3a
+				text-align: center
+				svg
+					g, path
+						fill: #6c6c6c !important
+				&:hover
+					svg
+						g, path
+							fill: #fff !important
+	&__contacts
+		padding-top: 9px
+		text-align: right
+		width: 160px
+	&__phone
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 11px
+	&__time
+		margin-bottom: 5px
+		strong
+			font-weight: 500
+	&__email
+		margin-bottom: 17px
+		a
+			color: #31b2eb
+
+	&__btn
+		&:hover
+			color: #fff
+		
+.page
+	&__nav
+		color: #fff
+		background-color: #31B2EB
+		text-align: center
+		li
+			transition: .3s
+			&.selected, &:hover
+				background-color: #2DA2D6
+		a
+			display: block
+			color: #fff
+			padding: 7.5px 22px
+			
+		
+	&__wrap
+		padding-bottom: 60px
+
+	&__content
+		background-color: #fff
+		border-radius: 8px
+		padding: 22px 25px 25px
+	&__col
+		width: 50%
+		&:nth-of-type(1)
+			padding-right: 15px
+		&:nth-of-type(2)
+			padding-left: 15px
+	&__subtitle
+		font-size: 18px
+		font-weight: 700
+		color: #222
+		border-bottom: 1px solid #EEF2F5
+		padding-bottom: 22px
+		margin-bottom: 15px
+	&__data
+		border-bottom: 1px solid #EEF2F5
+		padding-bottom: 15px
+		
+	&__list, &__data
+		li
+			display: block
+			margin-bottom: 13px
+			&:last-of-type
+				margin-bottom: 0
+		
+	&__list
+		margin-top: 15px
+		li
+			position: relative
+			padding-left: 15px
+			&:before
+				content: ''
+				position: absolute
+				width: 4px
+				height: 4px
+				border: 2px solid #31b2eb
+				background-color: #ffffff
+				-webkit-border-radius: 50%
+				border-radius: 50%
+				left: 0
+				top: 4px
+		
+.popup
+	display: none
+	margin-top: 110px
+	position: relative
+	border-radius: 8px
+	&__close
+		position: absolute
+		top: 15px
+		right: 15px
+		cursor: pointer
+		transition: .3s
+		g, path
+			transition: .3s
+			fill: #969696 !important
+		&:hover
+			transform: rotate(90deg)
+			g, path
+				fill: #000 !important
+		svg
+			width: 20px
+			height: 19px
+		
+	&_callback
+		width: 360px
+		padding: 15px 30px 30px !important
+		background: url('../../img/form-right.png') no-repeat right bottom, #fff
+	&_policy
+		padding: 15px 15px 30px 30px !important
+		width: 700px
+	&__title
+		font-size: 20px
+		text-align: center
+		font-weight: 700
+		color: #333
+		margin-bottom: 10px
+	&__desc
+		line-height: 20px
+		text-align: center
+		border-bottom: 1px solid #EEF2F5
+		padding-bottom: 20px
+		margin-bottom: 20px
+	&__text
+		color: #888
+		margin-bottom: 45px
+		&_more
+			margin-top: 25px
+			overflow-y: auto
+			padding-right: 10px
+			max-height: 295px
+			margin-bottom: 0
+
+		
+	&__input
+		margin-bottom: 20px
+
+	&__btn
+		margin-top: 30px
+		width: 100%
+		max-width: 265px
+		
+		
+		
+	.fancybox-close-small
+		display: none
+
+
+.thanks
+	padding-top: 175px
+	padding-bottom: 170px
+	text-align: center
+	&__icon
+		width: 46px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 13px
+	&__title
+		font-size: 36px
+		font-weight: 700
+		color: #33b3eb
+		margin-bottom: 15px
+	&__desc
+		font-size: 16px
+		margin-bottom: 20px
+		color: #666
+	&__text
+		line-height: 22px
+		border-bottom: 1px solid #EEF2F5
+		padding-bottom: 20px
+		margin-bottom: 20px
+	&__content
+		margin-bottom: 25px
+		line-height: 22px
+		color: #666
+	&__btn
+		max-width: 265px
+		width: 100%
+		
+		
+		
+		
